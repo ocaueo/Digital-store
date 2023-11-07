@@ -49,8 +49,119 @@ header .busca :placeholder-shown {
 }
 
 header .acoes {
-    border: 1px solid red;
     margin-left: 48px;
+    position: relative;
+}
+
+header .acoes a {
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 26px;
+    transition-duration: 200ms;
+}
+
+header .acoes .underlined {
+    color: #474747;
+    text-decoration: underline;
+}
+
+header .acoes .underlined:hover {
+    color: #c92071;
+}
+
+header .acoes .filled {
+    background-color: #c92071;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-right: 70px;
+}
+
+header .acoes .filled:hover {
+    background-color: #c92071;
+
+}
+
+header .acoes box-icon {
+width: 40px;
+height: 40px;
+padding: 8px;
+fill: #c92071;
+cursor: pointer;
+position: relative;
+}
+
+header .acoes box-icon::after {
+    content: attr(items);
+    min-width: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #c92071;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+header .cart {
+    width: 315px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px 0 #00000020;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+header .cart.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+header .cart h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: .75px;
+}
+
+header .cart > h3:first-of-type {
+    margin-bottom: 20px;
+}
+
+header .cart > h3:last-of-type {
+    margin-top: 20px;
+}
+
+header .cart ul {
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header .cart ul li {
+    display: flex;
+}
+
+header .cart ul li h3 {
+    line-height: 20px;
+}
+
+header .cart ul li .info {
+    flex: 1;
+}
+
+header .cart ul li img {
+    width: 71px;
+    height: 58px;
+    border-radius: 3px;
 }
 
 header nav {
